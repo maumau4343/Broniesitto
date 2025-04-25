@@ -4,6 +4,8 @@ const handlebars = require("express-handlebars");
 
 const app = express();
 const PORT = 8081;
+const path = require("path");
+app.set("views", path.join(__dirname, "views"));
 
 // Middleware para receber dados de formulário e JSON
 app.use(express.urlencoded({ extended: false }));
