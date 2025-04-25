@@ -1,0 +1,398 @@
+/* ==========================
+   Estilos Gerais
+   ========================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: #000000;
+    color: #651eb6;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    background-color: #000000;
+}
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container, .container2 {
+    display: flex;
+    height: 100vh;
+    width: 90%;
+    max-width: 1200px;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    background-color: #222222;
+    align-items: center;
+    justify-content: center;   
+    color: white;
+}
+
+.container2 {
+    background-color: #111111;
+    align-items: center;
+    justify-content: left;
+    color: white;
+}
+
+.left-section {
+    width: 50%;
+    padding-right: 40px;
+}
+
+.left-section h2 {
+    font-size: 28px;
+}
+
+.left-section p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #dddddd;
+}
+
+
+.right-section {
+    width: 50%;
+    text-align: center;
+}
+
+.tool-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Botões das ferramentas */
+.tool {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 220px;
+    cursor: pointer;
+}
+
+.math-tool { background: #ff6600; }
+.physics-tool { background: #00c672; }
+.chemistry-tool { background: #a05eff; }
+
+/* ==========================
+   Navbar
+   ========================== */
+.navbar {
+    background: linear-gradient(to right, #330000, #660000);
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* diminuído */
+    font-size: 18px; /* ajustado para não ficar muito grande */
+}
+
+.navbar .logo {
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+    padding: 5px 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    display: block;
+}
+
+/* Submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #222;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+}
+
+.submenu a {
+    color: #ff4d4d;
+    padding: 10px;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* ==========================
+   Botões Entrar/Cadastrar
+   ========================== */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons .btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.btn-light {
+    background: rgb(132, 0, 0);
+    color: #100000;
+    border: 1px solid #b30000;
+}
+
+.btn-light:hover {
+    background: black;
+    color: #ff4d4d;
+}
+
+.btn-dark {
+    background: #990000;
+    color: white;
+}
+
+.btn-dark:hover {
+    background: #e60000;
+    color: black;
+}
+
+/* ==========================
+   Lista de Tarefas
+   ========================== */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    background: #1a1a1a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+li:hover {
+    background: #333;
+}
+
+li a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #ff8080;
+}
+
+/* ==========================
+   Botões Gerais
+   ========================== */
+button {
+    background: #4d0101;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #800000;
+}
+
+/* ==========================
+   Formulários
+   ========================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+form input, form label {
+    font-size: 14px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #111;
+    color: #f0f0f0;
+}
+
+form input:focus {
+    border-color: #ff4d4d;
+    outline: none;
+}
+
+/* ==========================
+   Rodapé
+   ========================== */
+.footer {
+    background: #800000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* ==========================
+   Cards
+   ========================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background-color: #000;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card {
+    background-color: #1b0000 !important; /* cor de fundo escura + FORÇADO */
+    color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Garantir que imagem não cause fundo branco */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #1b0000; /* força fundo da imagem */
+}
+
+/* Conteúdo do card */
+.card-content {
+    padding: 20px;
+    text-align: center;
+    background-color: #1b0000; /* fundo do conteúdo também escuro */
+}
+
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+/* Preço destacado */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6666;
+}
+
+.text{
+    color: #6b6868;
+}
+
+/* Botão de comprar */
+.buy-button {
+    margin-top: 15px;
+    background-color: #ff4d4d;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #b30000;
+    color: white;
+}
+
+/* ==========================
+   Carousel
+   ========================== */
+.carousel {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.2);
+}
+
+.carousel-inner {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 12s infinite;
+}
+
+.carousel-item {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
