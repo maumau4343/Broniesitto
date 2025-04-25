@@ -29,7 +29,7 @@ app.get("/login", (req, res) => {
 app.get("/calculo", (req, res) => {
   res.render("calculos");
 });
-    
+
 app.get('/sobre', (req, res) => {
     res.render('sobre');
 });
@@ -41,6 +41,4 @@ app.use((req, res) => {
 });
 
 // Iniciar servidor
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
+module.exports = app;
